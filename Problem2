@@ -1,0 +1,60 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Type a program that asks the user to enter his 
+// name and prints it on the screen
+
+string ReadName()
+{
+	string Name;
+	cout << "Plz Enter Your Name : ";
+	getline(cin, Name);
+	return Name;
+}
+
+void PrintTheName(string Name)
+{
+	cout << "\nYour Name is : " << Name << endl;
+}
+
+int main()
+{
+	PrintTheName(ReadName());
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
