@@ -1,0 +1,43 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+//Write a Program to Ask The User To Enter : 
+//Number, Then Print The "Half Of The <Number> Is <???> "
+
+int ReadNumber()
+{
+	int Number;
+	cout << "Plz Enter The Number : ";
+	cin >> Number;
+	return Number;
+}
+
+float CalculateHalfNumber(int Number)
+{
+	return (float)Number / 2;
+}
+
+void PrintResult(int Number)
+{
+	string Result =  "\nHalf Of " + to_string(Number)
+	+ " is " + to_string(CalculateHalfNumber(Number));
+	cout << Result << endl;
+}
+
+int main()
+{
+	PrintResult(ReadNumber());
+}
+
+
+
+
+
+
+
+
+
+
+
