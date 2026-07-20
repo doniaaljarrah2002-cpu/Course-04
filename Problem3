@@ -1,0 +1,41 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+//"Write a C++ program that prompts the user to enter a number,
+// checks whether it is Even or Odd using Functions and Enums,
+// and then prints the result."
+
+enum enNumberType { Odd = 1, Even = 2 };
+
+int ReadNumber()
+{
+	int Num;
+	cout << "Plz Enter The Number : ";
+	cin >> Num;
+	return Num;
+}
+
+enNumberType CheckNumberType(int Num)
+{
+	int Result = Num % 2;
+	
+	if (Result == 0)
+		return enNumberType::Even;
+	else
+		return enNumberType::Odd;
+}
+
+void PrintNumberType(enNumberType NumberType)
+{
+	if (NumberType == enNumberType::Even)
+		cout << "\nNumber Is EVEN\n";
+	else
+		cout << "\nNumber IS ODD\n";
+}
+
+int main()
+{
+	PrintNumberType(CheckNumberType(ReadNumber()));
+}
