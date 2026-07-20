@@ -1,0 +1,80 @@
+
+#include <iostream>
+using namespace std;
+
+// Write a program that asks the user to enter their details:
+// age and driver's license or Has Recommendation, 
+// then 'rented' if they are over 21 years old and have a
+// driver's license, otherwise print 'disapproved' 
+
+struct stInfo
+{
+	short Age;
+	bool HasDriverLicense;
+	bool HasRecommendation;
+};
+
+stInfo ReadInfo()
+{
+	stInfo Info;
+
+	cout << "Plz Enter Your Age : ";
+	cin >> Info.Age;
+
+	cout << "Do You Has Driver License(0/1) : ";
+	cin >> Info.HasDriverLicense;
+
+	cout << "Do You Has Recommendation(0/1) : ";
+	cin >> Info.HasRecommendation;
+
+	return Info;
+}
+
+bool IsAccepted(stInfo Info)
+{
+	return (Info.Age > 21 && Info.HasDriverLicense) || Info.HasRecommendation;
+}
+
+void PrintResult(stInfo Info)
+{
+	if (IsAccepted(Info))
+	{
+		cout << "\nHired\n";
+	}
+	else
+	{
+		cout << "\nRejected\n";
+	}
+}
+
+int main()
+{
+	PrintResult(ReadInfo());
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
