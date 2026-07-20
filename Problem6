@@ -1,0 +1,79 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+//Write a program To Ask The User To Enter 
+//First Name - Last Name
+//Then Print Full Name On Screen
+
+struct stInfo
+{
+	string FirstName;
+	string LastName;
+};
+
+stInfo ReadInfo()
+{
+	stInfo Info;
+
+	cout << "Plz Enter Your First Name : ";
+	cin >> Info.FirstName;
+
+	cout << "Plz Enter Your Last Name : ";
+	cin >> Info.LastName;
+
+	return Info;
+}
+
+string GetFullName(stInfo Info , bool Reversed)
+{
+	string FullName = "";
+
+	if (Reversed)
+		FullName = Info.LastName + " " + Info.FirstName;
+	else
+		FullName = Info.FirstName + " " + Info.LastName;
+
+	return FullName;
+}
+
+void PrintFullName(string FullName)
+{
+	cout << "\nYour Full Name is : " << FullName;
+	cout << endl;
+}
+
+int main()
+{
+	 PrintFullName(GetFullName(ReadInfo(), false));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
