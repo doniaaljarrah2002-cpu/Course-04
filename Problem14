@@ -1,0 +1,57 @@
+
+#include <iostream>
+using namespace std;
+
+//Write a Program To Ask The User To Enter : Number1 ,Number2
+//Then Print The Two Numbers, Then Swap The Two Numbers and Print Them.
+
+void ReadNumbers(int& Num1, int& Num2)
+{
+	cout << "Plz Enter Number1 : ";
+	cin >> Num1;
+
+	cout << "Plz Enter Number2 : ";
+	cin >> Num2;
+}
+
+void Swap(int& Num1, int& Num2)
+{
+	int Temp;
+
+	Temp = Num1;
+	Num1 = Num2;
+	Num2 = Temp;
+}
+
+void PrintNumbers(int Num1, int Num2)
+{
+	cout << "\nNumber1 : " << Num1;
+	cout << "\nNumber2 : " << Num2 << endl;
+}
+
+int main()
+{
+	int Num1, Num2;
+
+	ReadNumbers(Num1, Num2);
+	PrintNumbers(Num1, Num2);
+
+	Swap(Num1, Num2);
+
+	PrintNumbers(Num1, Num2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
