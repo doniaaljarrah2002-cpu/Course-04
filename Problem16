@@ -1,0 +1,51 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+//Write a Program To Calculate Rectangle Area Through Diagonal And 
+//Side Area Of Rectangle And Print It On The Screen.
+// Area = A * sqrt(pow(D, 2) - pow(A, 2))
+
+void ReadNumbers(float& A, float& D)
+{
+	cout << "Plz Enter Rectangle Side A : ";
+	cin >> A;
+
+	cout << "Plz Enter Rectangle Diagonal D : ";
+	cin >> D;
+}
+
+float RectangleAreaBySideAndDiagonal(float A, float D)
+{
+	float Area = A * sqrt(pow(D, 2) - pow(A, 2));
+	return Area;
+}
+
+void PrintResult(float Area)
+{
+	cout << "\nRectangle Area = " << Area << endl;
+}
+
+int main()
+{
+	float A, D;
+
+	ReadNumbers(A, D);
+	PrintResult(RectangleAreaBySideAndDiagonal(A, D));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
