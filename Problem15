@@ -1,0 +1,65 @@
+
+#include <iostream>
+using namespace std;
+
+//Write a Program To Calculate Rectangle Area And Print It 
+// On The Screen :  Area = A*B
+
+void ReadNumbers(float& A, float& B)
+{
+	cout << "Plz Enter Rectangle Width(A) : ";
+	cin >> A;
+
+	cout << "Plz Enter Rectangle Length(B) : ";
+	cin >> B;
+}
+
+float CalculateRectangleArea(float A, float B)
+{
+	return A * B;
+}
+
+void PrintResult(float Area)
+{
+	cout << "\nRectangle Area = " << Area << endl;
+}
+
+int main()
+{
+	float A, B;
+	ReadNumbers(A, B);
+	PrintResult(CalculateRectangleArea(A, B));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
