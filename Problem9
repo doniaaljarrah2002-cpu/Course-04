@@ -1,0 +1,64 @@
+
+#include <iostream>
+using namespace std;
+
+//Write a Program To Ask The User To Enter :
+//Number1, Number2, Number3
+//Then Print The Sum Of Entered Numbers
+
+void ReadNumbers(int& Num1, int& Num2, int& Num3)
+{
+	cout << "Plz Enter Number1 : ";
+	cin >> Num1;
+
+	cout << "Plz Enter Number2 : ";
+	cin >> Num2;
+
+	cout << "Plz Enter Number3 : ";
+	cin >> Num3;
+}
+
+int SumOf3Numbers(int Num1, int Num2, int Num3)
+{
+	return Num1 + Num2 + Num3;
+}
+
+void PrintTheSumOfNumbers(int Total)
+{
+	cout << "\nThe Total Sum Of Numbers = " << Total << endl;
+}
+
+int main()
+{
+	int Num1, Num2, Num3;
+	
+	ReadNumbers(Num1, Num2, Num3);
+	PrintTheSumOfNumbers(SumOf3Numbers(Num1, Num2, Num3));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
