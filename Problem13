@@ -1,0 +1,49 @@
+
+#include <iostream>
+using namespace std;
+
+//Write a Program To Ask The User To Enter 3 Numbers :A B C
+//Then Print MAX Number
+
+void ReadNumbers(int& Num1, int& Num2, int& Num3)
+{
+	cout << "Plz Enter Number1 : ";
+	cin >> Num1;
+
+	cout << "Plz Enter Number2 : ";
+	cin >> Num2;
+
+	cout << "Plz Enter Number3 : ";
+	cin >> Num3;
+}
+
+int MaxOf3Numbers(int& Num1, int& Num2, int& Num3)
+{
+	if (Num1 > Num2)
+	{
+		if (Num1 > Num3)
+			return Num1;
+		else
+			return Num3;
+	}
+	else
+	{
+		if (Num2 > Num3)
+			return Num2;
+		else
+			return Num3;
+	}
+}
+
+void PrintResults(int Max)
+{
+	cout << "\nThe Maximum Number is : " << Max << endl;
+}
+
+int main()
+{
+	int Num1, Num2, Num3;
+
+	ReadNumbers(Num1, Num2, Num3);
+	PrintResults(MaxOf3Numbers(Num1, Num2, Num3));
+}
