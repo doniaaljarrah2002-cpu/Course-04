@@ -1,0 +1,56 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+/* Write a Program To Calculate Circle Area Along 
+The Circumference,Then Print It On The Screen
+Area = (pow(L, 2)) / (4 * PI)
+*/
+
+float ReadCircumference()
+{
+	float L;
+	cout << "Plz Enter Cirummference : ";
+	cin >> L;
+	return L;
+}
+
+float CircleAreaByCircumference(float L)
+{
+	const float PI = 3.14;
+	float Area = pow(L, 2) / (4 * PI);
+	return Area;
+}
+
+void PrintResult(float Area)
+{
+	cout << "\nCircleAreaByCircumference = " << Area << endl;
+}
+
+int main()
+{
+	PrintResult(CircleAreaByCircumference(ReadCircumference()));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
