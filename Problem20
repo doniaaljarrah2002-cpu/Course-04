@@ -1,0 +1,66 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+/* Write a Program To Calculate Circle Area Inscribed In a
+ Square,Then Print It On The Screen
+Area = (PI * pow(A, 2)) / 4     
+*/
+
+float ReadSquareSide()
+{
+	float A;
+	cout << "Plz Enter Square Side(A) : ";
+	cin >> A;
+	return A;
+}
+
+float CircleAreaInscribedInSquare(float A)
+{
+	const float PI = 3.14;
+	float Area = (PI * pow(A, 2)) / 4;
+	return Area;
+}
+
+void PrintResult(float Area)
+{
+	cout << "\nCircleAreaInscribedInSquare = " << Area << endl;
+}
+
+int main()
+{
+	PrintResult(CircleAreaInscribedInSquare(ReadSquareSide()));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
