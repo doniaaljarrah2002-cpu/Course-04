@@ -1,0 +1,61 @@
+
+#include <iostream>
+using namespace std;
+
+//Write a Program To Print From 1 To Num
+
+int ReadNumber()
+{
+	int Number;
+	cout << "\nPlz Enter Number : ";
+	cin >> Number;
+	return Number;
+}
+
+void PrintRangeFrom1toN_UsingWhileLoop(int Number)
+{
+	cout << "\nRange Printed Using While Statement :\n";
+
+	int Counter = 0;
+	while (Counter < Number)
+	{
+		Counter++;
+		cout << Counter << endl;
+	}
+}
+
+void PrintRangeFrom1toN_UsingDoWhileLoop(int Number)
+{
+	cout << "\nRange Printed Using Do_While Statement :\n";
+
+	int Counter = 0;
+	do
+	{
+		Counter++;
+		cout << Counter << endl;
+
+	} while (Counter < Number);
+}
+
+void PrintRangeFrom1toN_UsingForLoop(int Number)
+{
+	cout << "\nRange Printed Using For Statement :\n";
+
+
+	for (int Counter = 1; Counter <= Number; Counter++)
+	{
+		cout << Counter << endl;
+	}
+}
+
+int main()
+{
+	PrintRangeFrom1toN_UsingWhileLoop(ReadNumber());
+	cout << "______________________________________";
+	PrintRangeFrom1toN_UsingDoWhileLoop(ReadNumber());
+	cout << "______________________________________";
+	PrintRangeFrom1toN_UsingForLoop(ReadNumber());
+}
+
+
+
