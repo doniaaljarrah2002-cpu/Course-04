@@ -1,0 +1,44 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+//Write a Program To Calculate Factorial Of N!  
+
+int ReadPositiveNumber(string Message)
+{
+	int Number;
+	do
+	{
+		cout << Message;
+		cin >> Number;
+
+	} while (Number <= 0);
+
+	return Number;
+}
+
+int Factorial(int Number)
+{
+	int F = 1;
+	for (int Counter = Number; Counter >= 1; Counter--)
+	{
+		F *= Counter; 
+	}
+	return F;
+}
+
+int main()
+{
+	cout << Factorial(ReadPositiveNumber("Plz Enter Positive Number : ")) << endl;
+}
+
+
+
+
+
+
+
+
+
+
