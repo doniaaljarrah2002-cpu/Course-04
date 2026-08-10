@@ -1,0 +1,56 @@
+
+#include <iostream>
+using namespace std;
+
+//Write a Program To Sum Even Numbers From 1 To Num
+
+enum enOddEven { Odd = 1, Even = 2 };
+
+int ReadNumber()
+{
+	int Number;
+	cout << "Plz Enter Number : ";
+	cin >> Number;
+	return Number;
+}
+
+enOddEven CheckOddOrEven(int Number)
+{
+	if (Number % 2 == 0)
+		return enOddEven::Even;
+	else
+		return enOddEven::Odd;
+}
+
+int SumEvenNumbersFrom1toN(int Number)
+{
+	cout << "\nSum Even Numbers : ";
+
+	int Counter = 0;
+	int Sum = 0;
+	while (Counter < Number)
+	{
+		Counter++;
+		if (CheckOddOrEven(Counter) == enOddEven::Even)
+		{
+			Sum += Counter;
+		}
+	}
+	return Sum;
+}
+
+int main()
+{
+	cout << SumEvenNumbersFrom1toN(ReadNumber()) << endl;
+}
+
+
+
+
+
+
+
+
+
+
+
