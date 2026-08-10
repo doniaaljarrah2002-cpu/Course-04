@@ -1,0 +1,41 @@
+
+#include <iostream>
+using namespace std;
+
+//Write a Program To Ask The User To Enter : Number 
+//Then Print The Number^2 , Number^3 ,Number^4
+
+int ReadNumber()
+{
+	int Number;
+	cout << "Plz Enter Number : ";
+	cin >> Number;
+	return Number;
+}
+
+void PowerOf2_3_4(int Number)
+{
+	int a, b, c;
+
+	a = pow(Number, 2);
+	b = pow(Number, 3);
+	c = pow(Number, 4);
+
+	cout << a << " " << b << " " << c << endl;
+}
+
+int main()
+{
+	PowerOf2_3_4(ReadNumber());
+}
+
+
+
+
+
+
+
+
+
+
+
