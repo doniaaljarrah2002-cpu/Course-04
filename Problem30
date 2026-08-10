@@ -28,10 +28,25 @@ int Factorial(int Number)
 	return F;
 }
 
+void PrintFactorial(int F)
+{
+	cout << "\nThe Factorial Is : " << F << endl;
+}
+
 int main()
 {
-	cout << Factorial(ReadPositiveNumber("Plz Enter Positive Number : ")) << endl;
+	PrintFactorial(Factorial(ReadPositiveNumber("Plz Enter Positive Number : ")));
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
