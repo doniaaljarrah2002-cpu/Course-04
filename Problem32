@@ -1,0 +1,68 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+//Write a Program To Ask The User To Enter : Number , M
+//Then Print The Number^M
+
+int ReadNumber()
+{
+	int Number;
+	cout << "Plz Enter Number : ";
+	cin >> Number;
+	return Number;
+}
+
+int ReadPower()
+{
+	int Number;
+	cout << "Plz Enter The Power : ";
+	cin >> Number;
+	return Number;
+}
+
+int PowerOf(int Number, int M)
+{
+	if (M == 0)
+		return 1;
+
+	int P = 1;
+	for (int i = 1; i <= M; i++)
+	{
+		P *= Number;  
+	}
+	return P;	
+}
+
+void PrintPowerResult()
+{
+	int Number = ReadNumber();
+	int Power = ReadPower();
+
+	cout <<"\n" << Number << " To The Power Of " << Power <<
+		" Is = " << PowerOf(Number, Power) << endl;
+}
+
+int main()
+{
+	PrintPowerResult();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
