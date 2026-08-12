@@ -2,10 +2,11 @@
 #include <iostream>
 using namespace std;
 
-//Write a Program To Ask The User To Enter : Grade 
-//Then Print The Grade As Follows :
-//90-100 Print A       80-89 Print B      70-79 Print C
-//60-69 Print D        50-59 Print E     ,Otherwise Print F
+/* Write a Program To Ask The User To Enter : Grade 
+Then Print The Grade As Follows :
+90-100 Print A       80-89 Print B      70-79 Print C
+60-69 Print D        50-59 Print E     ,Otherwise Print F
+*/
 
 int ReadNumberInRange(int From, int To)
 {
