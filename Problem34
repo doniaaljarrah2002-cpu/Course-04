@@ -1,0 +1,83 @@
+
+#include <iostream>
+using namespace std;
+
+/* Write a Program To Ask The User To Enter : Total Sales
+The Commission Is Calculated As One Percentage*The Total Sales Amount,
+all You Need Is To Decide Which Percentage To Use Of The Following :
+1000000 ---> Percentage Is 1%
+500K to 1M ---> Percentage Is 2%
+100K to 500K ---> Percentage Is 3%
+50K to 100K ---> Percentage Is 5%
+Otherwise ----> Percentage Is 0%
+*/
+
+float ReadTotalSales()
+{
+	float TotalSales;
+	cout << "Plz Enter Total Sales : ";
+	cin >> TotalSales;
+	return TotalSales;
+}
+
+float GetCommissionPercentage(float TotalSales)
+{
+	if (TotalSales >= 1000000)
+		return 0.01;
+	else if (TotalSales >= 500000)
+		return 0.02;
+	else if (TotalSales >= 100000)
+		return 0.03;
+	else if (TotalSales >= 50000)
+		return 0.05;
+	else
+		return 0.00;
+}
+
+float CalcualteTotalCommission(float TotalSales)
+{
+	return GetCommissionPercentage(TotalSales) * TotalSales;
+}
+
+void PrintCommissionPercentage(float TotalSales)
+{
+	cout << "\nYour Commission Percentage = " << GetCommissionPercentage(TotalSales) * 100 << "%";
+	cout << "\nYour Total Commission = " << CalcualteTotalCommission(TotalSales) << endl;
+}
+
+int main()
+{
+	PrintCommissionPercentage(ReadTotalSales());
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
