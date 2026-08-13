@@ -1,0 +1,92 @@
+
+#include <iostream>
+using namespace std;
+
+/* Write a Program To Ask The User To Enter : Pennies,Nickels,Dimes,Quarters,Dollars
+Then Calculate The Total Pennies,Total Dollars and Print Them On Screen
+Giving That :
+Penny = 1
+Nickel = 5 Penny
+Dime = 10 Penny
+Quarter = 25 Penny
+Dollar = 100 Penny
+*/
+
+struct stPiggyBankContent
+{
+	int Pennies, Nickels, Dimes, Quarters, Dollars;
+};
+
+stPiggyBankContent ReadPiggyBankContent()
+{
+	stPiggyBankContent PiggyBankContent;
+
+	cout << "Plz Enter The Total Number Of Pennies : ";
+	cin >> PiggyBankContent.Pennies;
+
+	cout << "Plz Enter The Total Number Of Nickels : ";
+	cin >> PiggyBankContent.Nickels;
+
+	cout << "Plz Enter The Total Number Of Dimes : ";
+	cin >> PiggyBankContent.Dimes;
+
+	cout << "Plz Enter The Total Number Of Quarters : ";
+	cin >> PiggyBankContent.Quarters;
+
+	cout << "Plz Enter The Total Number Of Dollars : ";
+	cin >> PiggyBankContent.Dollars;
+
+	return PiggyBankContent;
+}
+
+int CalculateTotalPennies(stPiggyBankContent PiggyBankContent)
+{
+	int TotalPennies = PiggyBankContent.Pennies * 1
+		+ PiggyBankContent.Nickels * 5
+		+ PiggyBankContent.Dimes * 10
+		+ PiggyBankContent.Quarters * 25
+		+ PiggyBankContent.Dollars * 100;
+
+	return TotalPennies;
+}
+
+float ConvertPenniesToDollars(int TotalPennies)
+{
+	return (float)TotalPennies / 100;
+}
+
+void PrintResult()
+{
+	int TotalPennies = CalculateTotalPennies(ReadPiggyBankContent());
+	cout << "\nTotalPennies = " << TotalPennies << endl;
+	cout << "\nTotalDollars = " << ConvertPenniesToDollars(TotalPennies) << endl;
+}
+
+int main()
+{
+	PrintResult();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
