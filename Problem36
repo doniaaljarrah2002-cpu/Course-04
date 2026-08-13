@@ -1,0 +1,70 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+/* Write a Program To Ask The User To Enter : Number1 , Number2, OperationType
+Then Perform The Calculation According To The Operation Type As Follows :
+"+" : Add The Two Numbers
+"-" : Subtract The Two Numbers
+"*" : Multiply The Two Numbers
+"/" : Devide The Two Numbers
+*/
+
+enum enOperationType {
+	Add = '+', Subtract = '-',
+	Multiply = '*', Divide = '/'
+};
+
+float ReadNumber(string Message)
+{
+	float Number = 0;
+	cout << Message;
+	cin >> Number;
+	return Number;	
+}
+
+enOperationType ReadOperationType()
+{
+	char OpType = '+';
+	cout << "Plz Enter Operation Type (+, -, *, /): ";
+	cin >> OpType;
+	return (enOperationType)OpType;
+}
+
+float Calcualt(float Number1, float Number2, enOperationType OpType)
+{
+	switch (OpType)
+	{
+	case enOperationType::Add:
+		return Number1 + Number2;
+	case enOperationType::Subtract:
+		return Number1 - Number2;
+	case enOperationType::Multiply:
+		return Number1 * Number2;
+	case enOperationType::Divide:
+		return Number1 / Number2;
+	default :
+		return Number1 + Number2;
+	}
+}
+
+int main()
+{
+	float Number1 = ReadNumber("Plz Enter The First Number : ");
+	float Number2 = ReadNumber("Plz Enter The Second Number : ");
+
+	enOperationType OpType = ReadOperationType();
+
+	cout << "\nResult = " << Calcualt(Number1, Number2, OpType) << endl;
+}
+
+
+
+
+
+
+
+
+
+
