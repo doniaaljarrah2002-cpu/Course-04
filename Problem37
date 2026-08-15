@@ -1,0 +1,55 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+//Write a Program To Read Numbers From User And Sum Them, Keep Reading
+//Until The User Enters -99 Then Print The Sum On Screen.
+
+float ReadNumbers(string Message)
+{
+	float Number = 0;
+	cout << Message;
+	cin >> Number;
+	return Number;
+}
+
+float SumNumbersUntil()
+{
+	float Number = 0;
+	float Sum = 0;
+	int Counter = 1;
+
+	do
+	{
+		Number = ReadNumbers("Plz Enter a Number ["
+			+ to_string(Counter) + "] : ");
+		if (Number == -99)
+			break;
+
+		Sum += Number;
+		Counter++;
+
+	} while (Number != -99);
+
+	return Sum;
+}
+
+void PrintSumOfNumbers()
+{
+	cout << "\nResult = " << SumNumbersUntil();
+
+}
+int main()
+{
+	PrintSumOfNumbers();
+}
+
+
+
+
+
+
+
+
+
