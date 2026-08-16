@@ -1,0 +1,43 @@
+
+#include <iostream>
+using namespace std;
+
+//Write a Program To Read a TotalBill and CashPaid and Calculate
+//The Remainder To Be Paid Back.
+
+float ReadPositiveNumber(string Message)
+{
+	float Number = 0;
+	do
+	{
+		cout << Message;
+		cin >> Number;
+
+	} while (Number <= 0);
+
+	return Number;
+}
+
+float CalcualteRemainder(float TotalBill, float TotalCashPaid)
+{
+	return TotalCashPaid - TotalBill;
+}
+
+void PrintRemainder()
+{
+	float TotalBill = ReadPositiveNumber("Plz Enter TotalBill : ");
+	float TotalCashPaid = ReadPositiveNumber("Plz Enter TotalCashPaid : ");
+	
+	cout << "__________________________________\n";
+	cout << "\nTotalBill = " << TotalBill;
+	cout << "\nTotalCashPaid = " << TotalCashPaid << endl;
+	cout << "\nThe Remainder = " << CalcualteRemainder(TotalBill, TotalCashPaid) << endl;
+}
+
+int main()
+{
+	PrintRemainder();
+}
+
+
+
