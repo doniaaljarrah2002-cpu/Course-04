@@ -1,0 +1,45 @@
+
+#include <iostream>
+using namespace std;
+
+/* Write a Program To Read a NumberOfHourse and Calculates 
+The Number Of Weeks, and Days Included In That Number. */
+
+float ReadPositiveNumber(string Message)
+{
+	float Number = 0;
+	do
+	{
+		cout << Message;
+		cin >> Number;
+
+	} while (Number <= 0);
+	return Number;
+}
+
+float HoursToDays(float NumberOfHours)
+{
+	return (float)NumberOfHours / 24;
+}
+
+float HoursToWeeks(float NumberOfHours)
+{
+	return (float)NumberOfHours / 24 / 7;
+}
+
+void PrintResult()
+{
+	float NumberOfHours = ReadPositiveNumber("Plz Enter NumberOfHours : ");
+	float Days = HoursToDays(NumberOfHours);
+	float Weeks = HoursToWeeks(NumberOfHours);
+
+	cout << "________________________\n";
+	cout << "\nTotalHours = " << NumberOfHours;
+	cout << "\nTotalDays = " << Days << " Days";
+	cout << "\nTotalWeeks = " << Weeks << " Weeks";
+}
+
+int main()
+{
+	PrintResult();
+}
