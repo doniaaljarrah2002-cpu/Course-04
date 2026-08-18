@@ -1,0 +1,73 @@
+
+#include <iostream>
+using namespace std;
+
+/* Write a Program To Calculate The Task Duration In Seconds 
+And Print It On Screen Given The Time Duration Of a Task 
+In The Number Of Days, Hours, Minutes,and Seconds.*/
+
+struct stTaskDuration
+{
+	float NumberOfDays, NumberOfHours, NumberOfMinutes, NumberOfSeconds;
+};
+
+float ReadPositiveNumber(string Message)
+{
+	float Number = 0;
+	do
+	{
+		cout << Message;
+		cin >> Number;
+
+	} while (Number <=0);
+
+	return Number;
+}
+
+stTaskDuration ReadTaskDuration()
+{
+	stTaskDuration TaskDuration;
+
+	TaskDuration.NumberOfDays = ReadPositiveNumber("Plz Enter NumberOfDays : ");
+	TaskDuration.NumberOfHours = ReadPositiveNumber("Plz Enter NumberOfHours : ");
+	TaskDuration.NumberOfMinutes = ReadPositiveNumber("Plz Enter NumberOfMinutes : ");
+	TaskDuration.NumberOfSeconds = ReadPositiveNumber("Plz Enter NumberOfSeconds : ");
+
+	return TaskDuration;
+}
+
+int TaskDurationInSecond(stTaskDuration TaskDuration)
+{
+	int DurationInSecond = 0;
+
+	DurationInSecond = TaskDuration.NumberOfDays * 60 * 60 * 24;
+	DurationInSecond += TaskDuration.NumberOfHours * 60 * 60;
+	DurationInSecond += TaskDuration.NumberOfMinutes * 60;
+	DurationInSecond += TaskDuration.NumberOfSeconds;
+
+	return DurationInSecond;
+}
+
+void PrintDurationInSecond()
+{
+	cout << "\nDurationInSecond = " << TaskDurationInSecond(ReadTaskDuration());
+	cout << endl;
+}
+
+int main()
+{
+	PrintDurationInSecond();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
