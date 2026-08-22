@@ -1,0 +1,25 @@
+
+#include <iostream>
+using namespace std;
+
+//Write a Program To Print All Letters From A to Z
+
+void PrintLetterFromAtoZ()
+{
+	for (int i = 65 ; i <= 90 ; i++)
+	{
+		cout << char(i) << endl;
+	}
+}
+
+int main()
+{
+	PrintLetterFromAtoZ();
+}
+
+
+
+
+
+
+
