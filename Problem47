@@ -1,0 +1,45 @@
+
+#include <iostream>
+using namespace std;
+
+/* Write a Program To Read a LoanAmount and Monthly Payment and
+Calculate How Many Months You Need To Settle The Loan */
+
+float ReadPositiveNumber(string Message)
+{
+	float Number = 0;
+	do
+	{
+		cout << Message;
+		cin >> Number;
+
+	} while (Number <= 0);
+	return Number;
+}
+
+float TotalMonths(float LoanAmount ,float MonthlyInstallment)
+{
+	return LoanAmount / MonthlyInstallment;
+}
+
+void PrintTotalMonths()
+{
+	float LoanAmount = ReadPositiveNumber("Plz Enter LoanAmount : ");
+	float MonthlyInstallment = ReadPositiveNumber("Plz Enter MonthlyInstallment : ");
+
+
+	cout << "\nTotal Months to Pay = " << TotalMonths(LoanAmount, MonthlyInstallment) <<" Months " << endl;
+}
+
+int main()
+{
+	PrintTotalMonths();
+}
+
+
+
+
+
+
+
+
